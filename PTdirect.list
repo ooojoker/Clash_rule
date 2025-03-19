@@ -1,12 +1,21 @@
+# PT站
 DOMAIN-SUFFIX,lemonhd.club
 DOMAIN-SUFFIX,piggo.me
 DOMAIN-SUFFIX,hdatmos.club
+DOMAIN-SUFFIX,ourbits.club
+DOMAIN-SUFFIX,ubits.club
+DOMAIN-SUFFIX,hhanclub.top
+
+# 网站
 DOMAIN-KEYWORD,purefishing
 DOMAIN-SUFFIX,linux.do
-DOMAIN-SUFFIX,hhanclub.top
-DOMAIN-SUFFIX,ubits.club
+
+# AI
 DOMAIN-SUFFIX,new.clivia.fun
-DOMAIN-SUFFIX,ourbits.club
+
+# nbtab
 DOMAIN-SUFFIX,naivetab.com
 DOMAIN-SUFFIX,nb.tab.com
+
+# 国内测速
 DOMAIN-SUFFIX,wangsuceshi.bmcx.com
