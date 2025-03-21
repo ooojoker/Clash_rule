@@ -20,3 +20,6 @@ DOMAIN-SUFFIX,tab.nbtab.cc
 
 # 国内测速
 DOMAIN-SUFFIX,wangsuceshi.bmcx.com
+
+#NAS
+DOMAIN-SUFFIX,fakenas.tk
