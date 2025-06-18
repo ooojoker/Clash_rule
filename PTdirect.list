@@ -13,11 +13,8 @@ DOMAIN-KEYWORD,purefishing
 DOMAIN-SUFFIX,linux.do
 DOMAIN-SUFFIX,ilovepdf.com
 
-
-
 # AI
 DOMAIN-SUFFIX,new.clivia.fun
-
 # nbtab
 DOMAIN-SUFFIX,naivetab.com
 DOMAIN-SUFFIX,nb.tab.com
@@ -26,6 +23,9 @@ DOMAIN-SUFFIX,tab.nbtab.cc
 # 国内测速
 DOMAIN-SUFFIX,wangsuceshi.bmcx.com
 
-
 #NAS
 DOMAIN-SUFFIX,fakenas.tk
+
+#小肥羊ALL IN ONE
+DOMAIN-SUFFIX,r.inews.qq.com 
+DOMAIN-SUFFIX,myip.ipip.net 
