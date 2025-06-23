@@ -8,6 +8,7 @@
 # DOMAIN-SUFFIX: 123
 # IP-CIDR: 4
 # TOTAL: 276
+DOMAIN,tracker.52dic.vip
 DOMAIN,0123456789nonexistent.com
 DOMAIN,0d.kebhana.mx
 DOMAIN,1337.abcvg.info
