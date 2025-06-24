@@ -284,6 +284,11 @@ IP-CIDR,207.241.226.111/32,no-resolve
 IP-CIDR,207.241.231.226/32,no-resolve
 IP-CIDR,52.58.128.163/32,no-resolve
 IP-CIDR,89.110.76.229/32,no-resolve
+# NAS内网PT下载地址
+SRC-IP-CIDR,192.168.1.35/32,no-resolve
+SRC-IP-CIDR,192.168.1.30/32,no-resolve
+SRC-IP-CIDR,192.168.1.39/32,no-resolve
+SRC-IP-CIDR,192.168.1.99/32,no-resolve
 
 # 网站
 DOMAIN-KEYWORD,purefishing
