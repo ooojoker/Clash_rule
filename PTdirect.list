@@ -1,13 +1,13 @@
+# NAS内网PT下载地址
+SRC-IP-CIDR,192.168.1.35/32,no-resolve
+SRC-IP-CIDR,192.168.1.30/32,no-resolve
+SRC-IP-CIDR,192.168.1.39/32,no-resolve
+SRC-IP-CIDR,192.168.1.99/32,no-resolve
+
 4# PT站
 # NAME: PrivateTracker
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-06-22 02:08:29
-# DOMAIN: 145
-# DOMAIN-KEYWORD: 4
-# DOMAIN-SUFFIX: 123
-# IP-CIDR: 4
-# TOTAL: 276
 DOMAIN,tracker.52dic.vip
 DOMAIN,0123456789nonexistent.com
 DOMAIN,0d.kebhana.mx
@@ -284,11 +284,6 @@ IP-CIDR,207.241.226.111/32,no-resolve
 IP-CIDR,207.241.231.226/32,no-resolve
 IP-CIDR,52.58.128.163/32,no-resolve
 IP-CIDR,89.110.76.229/32,no-resolve
-# NAS内网PT下载地址
-SRC-IP-CIDR,192.168.1.35/32,no-resolve
-SRC-IP-CIDR,192.168.1.30/32,no-resolve
-SRC-IP-CIDR,192.168.1.39/32,no-resolve
-SRC-IP-CIDR,192.168.1.99/32,no-resolve
 
 # 网站
 DOMAIN-KEYWORD,purefishing
