@@ -275,30 +275,6 @@ IP-CIDR,207.241.231.226/32,no-resolve
 IP-CIDR,52.58.128.163/32,no-resolve
 IP-CIDR,89.110.76.229/32,no-resolve
 
-# 网站
-DOMAIN-KEYWORD,purefishing
-DOMAIN-SUFFIX,linux.do
-DOMAIN-SUFFIX,ilovepdf.com
-
-# AI
-DOMAIN-SUFFIX,new.clivia.fun
-DOMAIN-SUFFIX,free.yubbchat
-# nbtab
-DOMAIN-SUFFIX,naivetab.com
-DOMAIN-SUFFIX,nb.tab.com
-DOMAIN-SUFFIX,tab.nbtab.cc
-
-# 国内测速
-DOMAIN-SUFFIX,wangsuceshi.bmcx.com
-
-#NAS
-DOMAIN-SUFFIX,fakenas.tk
-DOMAIN-SUFFIX,fakenas.eu.org
-
-# 小肥羊ALL IN ONE
-DOMAIN-SUFFIX,r.inews.qq.com 
-DOMAIN-SUFFIX,myip.ipip.net
-
 # 下载
 # NAME: Download
 # AUTHOR: blackmatrix7
@@ -342,3 +318,27 @@ PROCESS-NAME,qbittorrent
 PROCESS-NAME,qbittorrent.exe
 PROCESS-NAME,uTorrent
 PROCESS-NAME,uTorrent.exe
+
+# 网站
+DOMAIN-KEYWORD,purefishing
+DOMAIN-SUFFIX,linux.do
+DOMAIN-SUFFIX,ilovepdf.com
+
+# AI
+DOMAIN-SUFFIX,new.clivia.fun
+DOMAIN-SUFFIX,free.yubbchat
+# nbtab
+DOMAIN-SUFFIX,naivetab.com
+DOMAIN-SUFFIX,nb.tab.com
+DOMAIN-SUFFIX,tab.nbtab.cc
+
+# 国内测速
+DOMAIN-SUFFIX,wangsuceshi.bmcx.com
+
+#NAS
+DOMAIN-SUFFIX,fakenas.tk
+DOMAIN-SUFFIX,fakenas.eu.org
+
+# 小肥羊ALL IN ONE
+DOMAIN-SUFFIX,r.inews.qq.com 
+DOMAIN-SUFFIX,myip.ipip.net
