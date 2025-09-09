@@ -1,0 +1,238 @@
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🇯🇵 日本-故障转移
+      - 🇺🇸 美国-故障转移
+      - 🚨 应急-故障转移
+      - 🚦 全局-故障转移
+      - 🌐 全局-负载均衡
+      - 🇯🇵 日本节点
+      - 🇺🇸 美国节点
+      - 🚨 应急节点
+      - ⛔️ 不走代理
+      - 🇯🇵 JP_01
+      - 🇯🇵 JP_02
+      - 🇯🇵 JP_03
+      - 🇺🇸 US_01
+      - 🇺🇸 US_02
+      - 🇺🇸 US_03
+      - 🇿🇦 ZA_Down_01
+      - 🇿🇦 ZA_Down_02
+      - 🇿🇦 ZA_Down_03
+      - 🇺🇸 US_Down_01
+      - 🇺🇸 US_Down_02
+
+  - name: 👋 手动选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🇯🇵 日本-故障转移
+      - 🇺🇸 美国-故障转移
+      - 🚨 应急-故障转移
+      - 🚦 全局-故障转移
+      - 🌐 全局-负载均衡
+      - 🇯🇵 日本节点
+      - 🇺🇸 美国节点
+      - 🚨 应急节点
+      - ⛔️ 不走代理
+      - 🇯🇵 JP_01
+      - 🇯🇵 JP_02
+      - 🇯🇵 JP_03
+      - 🇺🇸 US_01
+      - 🇺🇸 US_02
+      - 🇺🇸 US_03
+      - 🇿🇦 ZA_Down_01
+      - 🇿🇦 ZA_Down_02
+      - 🇿🇦 ZA_Down_03
+      - 🇺🇸 US_Down_01
+      - 🇺🇸 US_Down_02
+
+  - name: 📹 YouTube
+    type: select
+    proxies:
+      - ✔️ SSID 策略
+      - ▶️ 手动-SSID策略
+      - 🚀 节点选择
+      - 🇯🇵 日本-故障转移
+      - 🇺🇸 美国-故障转移
+      - 🚨 应急-故障转移
+
+  - name: 💬 Ai平台
+    type: select
+    proxies:
+      - ✔️ SSID 策略
+      - ▶️ 手动-SSID策略
+      - ⛔️ 不走代理
+  - name: 🎃 Joker代理
+    type: select
+    proxies:
+      - ✔️ SSID 策略
+      - ▶️ 手动-SSID策略
+      - ⛔️ 不走代理
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - ✔️ SSID 策略
+      - ▶️ 手动-SSID策略
+  - name: 📢 谷歌服务
+    type: select
+    proxies:
+      - ✔️ SSID 策略
+      - ▶️ 手动-SSID策略
+      - ⛔️ 不走代理
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - ✔️ SSID 策略
+      - ▶️ 手动-SSID策略
+      - ⛔️ 不走代理
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - ✔️ SSID 策略
+      - ▶️ 手动-SSID策略
+      - ⛔️ 不走代理
+
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - ✔️ SSID 策略
+      - ▶️ 手动-SSID策略
+      - ⛔️ 不走代理
+
+  - name: ✔️ SSID 策略
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ⛔️ 不走代理
+    ssid-policy:
+      awesome5: ⛔️ 不走代理
+      fake: ⛔️ 不走代理
+      cellular: 🚀 节点选择
+      default: 🚀 节点选择
+
+  - name: ▶️ 手动-SSID策略
+    type: select
+    proxies:
+      - 👋 手动选择
+      - ⛔️ 不走代理
+    ssid-policy:
+      awesome5: ⛔️ 不走代理
+      fake: ⛔️ 不走代理
+      cellular: 👋 手动选择
+      default: 👋 手动选择
+
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇯🇵 JP_01
+      - 🇯🇵 JP_02
+      - 🇯🇵 JP_03
+      - 🇺🇸 US_01
+      - 🇺🇸 US_02
+      - 🇺🇸 US_03
+      - 🇿🇦 ZA_Down_01
+      - 🇿🇦 ZA_Down_02
+      - 🇿🇦 ZA_Down_03
+      
+  - name: 🇯🇵 日本节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - 🇯🇵 JP_01
+      - 🇯🇵 JP_02
+      - 🇯🇵 JP_03
+      
+  - name: 🇺🇸 美国节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - 🇺🇸 US_01
+      - 🇺🇸 US_02
+      - 🇺🇸 US_03
+      
+  - name: 🚨 应急节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇿🇦 ZA_Down_01
+      - 🇿🇦 ZA_Down_02
+      - 🇿🇦 ZA_Down_03
+      - 🇺🇸 US_Down_01
+      - 🇺🇸 US_Down_02
+
+  - name: 🇯🇵 日本-故障转移
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    proxies:
+      - 🇯🇵 JP_01
+      - 🇯🇵 JP_02
+      - 🇯🇵 JP_03
+      
+  - name: 🇺🇸 美国-故障转移
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    proxies:
+      - 🇺🇸 US_01
+      - 🇺🇸 US_02
+      - 🇺🇸 US_03
+      
+  - name: 🚨 应急-故障转移
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    proxies:
+      - 🇿🇦 ZA_Down_01
+      - 🇿🇦 ZA_Down_02
+      - 🇿🇦 ZA_Down_03
+      - 🇺🇸 US_Down_01
+      - 🇺🇸 US_Down_02
+
+  - name: 🚦 全局-故障转移
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    proxies:
+      - 🇺🇸 US_01
+      - 🇺🇸 US_02
+      - 🇺🇸 US_03
+      - 🇯🇵 JP_01
+      - 🇯🇵 JP_02
+      - 🇯🇵 JP_03
+      - 🇿🇦 ZA_Down_01
+      - 🇿🇦 ZA_Down_02
+      - 🇿🇦 ZA_Down_03
+      - 🇺🇸 US_Down_01
+      - 🇺🇸 US_Down_02
+
+  - name: 🌐 全局-负载均衡
+    type: load-balance
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    strategy: consistent-hashing
+    proxies:
+      - 🇯🇵 JP_01
+      - 🇯🇵 JP_02
+      - 🇯🇵 JP_03
+      - 🇺🇸 US_01
+      - 🇺🇸 US_02
+      - 🇺🇸 US_03
+      - 🇿🇦 ZA_Down_01
+      - 🇿🇦 ZA_Down_02
+      - 🇿🇦 ZA_Down_03
+
+  - name: ⛔️ 不走代理
+    type: select
+    proxies:
+      - DIRECT
