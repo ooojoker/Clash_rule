@@ -8,6 +8,7 @@ proxy-groups:
       - 🈶 日本优先场景
       - 🈴 失联场景
       - 🎯 全球直连
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spark.png
   - name: 🚄 手动切换
     type: select
     proxies:
@@ -29,6 +30,7 @@ proxy-groups:
       - 🇿🇦 南非05
       - ‍☠️ Claw失联 01
       - ‍☠️ Claw失联 02
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
   - name: 📲 电报消息
     type: select
     proxies:
@@ -37,6 +39,7 @@ proxy-groups:
       - 🈴 失联场景
       - 🚀 节点选择
       - 🚄 手动切换
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
   - name: 💬 OpenAi
     type: select
     proxies:
@@ -45,6 +48,7 @@ proxy-groups:
       - 🈴 失联场景
       - 🚀 节点选择
       - 🚄 手动切换
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Want_Want_1.png
   - name: 📹 油管视频
     type: select
     proxies:
@@ -53,6 +57,7 @@ proxy-groups:
       - 🈴 失联场景
       - 🚀 节点选择
       - 🚄 手动切换
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
   - name: 📺 哔哩哔哩
     type: select
     proxies:
@@ -60,6 +65,7 @@ proxy-groups:
       - 🉐 美国优先场景
       - 🈶 日本优先场景
       - 🈴 失联场景
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili_1.png
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -68,6 +74,7 @@ proxy-groups:
       - 🈴 失联场景
       - 🚀 节点选择
       - 🚄 手动切换
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/HBO_Max.png
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -75,6 +82,7 @@ proxy-groups:
       - 🉐 美国优先场景
       - 🈶 日本优先场景
       - 🈴 失联场景
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/WeTV.png
   - name: 📢 谷歌FCM
     type: select
     proxies:
@@ -83,6 +91,7 @@ proxy-groups:
       - 🈴 失联场景
       - 🚀 节点选择
       - 🚄 手动切换
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google.png
   - name: Ⓜ️ 微软Bing
     type: select
     proxies:
@@ -92,6 +101,7 @@ proxy-groups:
       - 🈴 失联场景
       - 🚀 节点选择
       - 🚄 手动切换
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
   - name: Ⓜ️ 微软云盘
     type: select
     proxies:
@@ -101,6 +111,7 @@ proxy-groups:
       - 🈴 失联场景
       - 🚀 节点选择
       - 🚄 手动切换
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/OneDrive.png
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -110,6 +121,7 @@ proxy-groups:
       - 🈴 失联场景
       - 🚀 节点选择
       - 🚄 手动切换
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Azure.png
   - name: ☁️ 自定代理
     type: select
     proxies:
@@ -119,6 +131,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🚄 手动切换
       - DIRECT
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png
   - name: 📦 Cloudflare
     type: select
     proxies:
@@ -128,6 +141,7 @@ proxy-groups:
       - 🈴 失联场景
       - 🚀 节点选择
       - 🚄 手动切换
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Cloudflare.png
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -137,6 +151,7 @@ proxy-groups:
       - 🈴 失联场景
       - 🚀 节点选择
       - 🚄 手动切换
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_2.png
   - name: 🎮 游戏平台
     type: select
     proxies:
@@ -146,6 +161,7 @@ proxy-groups:
       - 🈴 失联场景
       - 🚀 节点选择
       - 🚄 手动切换
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
   - name: 🎶 网易音乐
     type: select
     proxies:
@@ -155,6 +171,7 @@ proxy-groups:
       - 🈴 失联场景
       - 🚀 节点选择
       - 🚄 手动切换
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Music_Enhance.png
   - name: 🐟 漏网之鱼
     type: select
     proxies:
@@ -163,7 +180,8 @@ proxy-groups:
       - 🈴 失联场景
       - 🚀 节点选择
       - 🚄 手动切换
-
+      - 🎯 全球直连
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
   - name: 🉐 美国优先场景
     type: select
     proxies:
@@ -174,13 +192,13 @@ proxy-groups:
       fake: 🎯 全球直连
       cellular: ㊙️ 美国策略
       default: ㊙️ 美国策略
-
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
   - name: ㊙️ 美国策略
     type: select
     proxies:
       - 🔯 故障转移美国优先
       - 🇺🇲 美国节点
-
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
   - name: 🇺🇲 美国节点
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -190,6 +208,7 @@ proxy-groups:
       - 🇺🇸 美国 01
       - 🇺🇸 美国 02
       - 🇺🇸 美国 03
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
   - name: 🔯 故障转移美国优先
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -209,7 +228,7 @@ proxy-groups:
       - 🇿🇦 南非05
       - ‍☠️ Claw失联 01
       - ‍☠️ Claw失联 02
-
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
   - name: 🈶 日本优先场景
     type: select
     proxies:
@@ -220,13 +239,13 @@ proxy-groups:
       fake: 🎯 全球直连
       cellular: 🈚 日本策略
       default: 🈚 日本策略
-
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
   - name: 🈚 日本策略
     type: select
     proxies:
       - 🃏 故障转移日本优先
       - 🇯🇵 日本节点
-
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
   - name: 🇯🇵 日本节点
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -236,6 +255,7 @@ proxy-groups:
       - 🇯🇵 日本 01
       - 🇯🇵 日本 02
       - 🇯🇵 日本 03
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
   - name: 🃏 故障转移日本优先
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -255,8 +275,7 @@ proxy-groups:
       - 🇿🇦 南非05
       - ‍☠️ Claw失联 01
       - ‍☠️ Claw失联 02
-
-
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
   - name: 🈴 失联场景
     type: select
     proxies:
@@ -267,13 +286,13 @@ proxy-groups:
       fake: 🎯 全球直连
       cellular: 💯 失联策略
       default: 💯 失联策略
-
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/WiFi.png
   - name: 💯 失联策略
     type: select
     proxies:
       - 🈵 故障转移失联
       - 🚨 失联节点
-
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/WiFi.png
   - name: 🚨 失联节点
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -287,7 +306,7 @@ proxy-groups:
       - 🇿🇦 南非05
       - ‍☠️ Claw失联 01
       - ‍☠️ Claw失联 02
-
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/WiFi.png
   - name: 🈵 故障转移失联
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -301,8 +320,7 @@ proxy-groups:
       - 🇿🇦 南非05
       - ‍☠️ Claw失联 01
       - ‍☠️ Claw失联 02
-
-
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/WiFi.png
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -322,12 +340,14 @@ proxy-groups:
       - 🇿🇦 南非05
       - ‍☠️ Claw失联 01
       - ‍☠️ Claw失联 02
-
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Round_Robin.png
   - name: 🎯 全球直连
     type: select
     proxies:
       - DIRECT
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China_Map.png
   - name: 🇨🇳 自定直连
     type: select
     proxies:
       - DIRECT
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
