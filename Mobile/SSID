@@ -327,7 +327,7 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-  - name: 🔗 自定直连
+  - name: 🇨🇳 自定直连
     type: select
     proxies:
       - DIRECT
