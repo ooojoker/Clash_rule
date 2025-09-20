@@ -203,7 +203,7 @@ proxy-groups:
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
-    tolerance: 150
+    tolerance: 50
     proxies:
       - 🇺🇸 美国 01
       - 🇺🇸 美国 02
@@ -212,8 +212,8 @@ proxy-groups:
   - name: 🔯 故障转移美国优先
     type: fallback
     url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+    interval: 60
+    max-timeout: 2000
     proxies:
       - 🇺🇸 美国 01
       - 🇺🇸 美国 02
@@ -259,8 +259,8 @@ proxy-groups:
   - name: 🃏 故障转移日本优先
     type: fallback
     url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+    interval: 60
+    max-timeout: 2000
     proxies:
       - 🇯🇵 日本 01
       - 🇯🇵 日本 02
@@ -310,8 +310,8 @@ proxy-groups:
   - name: 🈵 故障转移失联
     type: fallback
     url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+    interval: 60
+    max-timeout: 2000
     proxies:
       - 🇿🇦 南非01
       - 🇿🇦 南非02
