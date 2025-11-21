@@ -1,1 +1,3 @@
-link00.okemby.org:8443
+# Emby服
+DOMAIN-SUFFIX,link00.okemby.org
+DOMAIN-SUFFIX,link01.okemby.org
