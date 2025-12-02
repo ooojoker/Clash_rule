@@ -1,0 +1,732 @@
+port: 7890
+socks-port: 7891
+mixed-port: 7893
+redir-port: 7892
+tproxy-port: 7895
+allow-lan: true
+bind-address: "*"
+mode: rule
+tcp-concurrent: true
+unified-delay: true
+
+geox-url:
+  mmdb: https://testingcf.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/Country.mmdb
+  geoip: https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat
+  geosite: https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat
+  asn: https://testingcf.jsdelivr.net/gh/xishang0128/geoip@release/GeoLite2-ASN.mmdb
+
+geo-auto-update: true
+geo-update-interval: 24
+geodata-mode: true
+
+log-level: info
+ipv6: true
+external-controller: 0.0.0.0:9090
+
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+tun:
+  enable: true
+  stack: system
+  dns-hijack:
+    - 0.0.0.0:53
+  auto-detect-interface: false
+  auto-route: false
+  auto-redirect: false
+  strict-route: false
+  endpoint-independent-nat: true
+
+sniffer:
+  enable: true
+  override-destination: true
+  sniff:
+    QUIC:
+      ports:
+      - 443
+    TLS:
+      ports:
+      - 443
+      - 8443
+    HTTP:
+      ports:
+      - 80
+      - 8080-8880
+      override-destination: true
+  force-domain:
+    - "+.netflix.com"
+    - "+.nflxvideo.net"
+    - "+.amazonaws.com"
+    - "+.media.dssott.com"
+  skip-domain:
+    - "+.apple.com"
+    - Mijia Cloud
+    - dlg.io.mi.com
+    - "+.oray.com"
+    - "+.sunlogin.net"
+    - "+.push.apple.com"
+  parse-pure-ip: true
+  force-dns-mapping: true
+
+dns:
+  enable: true
+  listen: 0.0.0.0:7874
+  ipv6: true
+  default-nameserver:
+    - 114.114.114.114
+    - tls://223.5.5.5:853
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - localhost.ptlogin2.qq.com
+    - geosite:cn
+  fake-ip-filter-mode: blacklist
+  respect-rules: false
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+
+proxy-providers:
+  provider1:
+    type: http
+    url: "https://sub.realnas.tk/XVE166b0hc5pdhyBMrm2/download/collection/ALL?target=ClashMeta"
+    interval: 3600
+    path: ./proxy_provider/provider1.yaml
+    proxy: DIRECT
+    header:
+      User-Agent:
+      - "clash.meta"
+      - "mihomo/1.18.3"
+
+    health-check:
+      enable: true
+      interval: 600
+      url: https://cp.cloudflare.com/generate_204
+    override:
+      skip-cert-verify: true
+      udp: true
+      # additional-prefix: "[provider1]"
+      # additional-suffix: "test"
+
+
+proxy-groups:
+  - name: "🚀 手动选择"
+    type: select
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 300
+    proxies:
+    - "♻️ 自动选择"
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇿🇦 南非节点"
+    - "🌐 其他地区"
+    - "🚨 失联节点"
+    - "🔯 故障转移"
+    filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
+    use:
+      - provider1
+
+  - name: "♻️ 自动选择"
+    type: select
+    filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
+    tolerance: 50
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 300
+    use:
+      - provider1
+
+  - name: "💬 即时通讯"
+    type: select
+    proxies:
+    - "♻️ 自动选择"
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇿🇦 南非节点"
+    - "🌐 其他地区"
+    - "🚨 失联节点"
+    - "🔯 故障转移"
+    - "🚀 手动选择"
+    - "🎯 全球直连"
+
+  - name: "🌐 社交媒体"
+    type: select
+    proxies:
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇿🇦 南非节点"
+    - "🌐 其他地区"
+    - "🚨 失联节点"
+    - "🔯 故障转移"
+    - "🚀 手动选择"
+    - "♻️ 自动选择"
+    - "🎯 全球直连"
+    filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
+    use:
+      - provider1
+
+  - name: "🚀 GitHub"
+    type: select
+    proxies:
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇿🇦 南非节点"
+    - "🌐 其他地区"
+    - "🚨 失联节点"
+    - "🔯 故障转移"
+    - "🚀 手动选择"
+    - "♻️ 自动选择"
+    - "🎯 全球直连"
+
+  - name: "🤖 ChatGPT"
+    type: select
+    proxies:
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇿🇦 南非节点"
+    - "🌐 其他地区"
+    - "🚨 失联节点"
+    - "🔯 故障转移"
+    - "🚀 手动选择"
+    - "♻️ 自动选择"
+    - "🎯 全球直连"
+    filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
+    use:
+      - provider1
+
+  - name: "🤖 Copilot"
+    type: select
+    proxies:
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇿🇦 南非节点"
+    - "🌐 其他地区"
+    - "🚨 失联节点"
+    - "🔯 故障转移"
+    - "🚀 手动选择"
+    - "♻️ 自动选择"
+    - "🎯 全球直连"
+    filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
+    use:
+      - provider1
+
+  - name: "🤖 AI服务"
+    type: select
+    proxies:
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇿🇦 南非节点"
+    - "🌐 其他地区"
+    - "🚨 失联节点"
+    - "🔯 故障转移"
+    - "🚀 手动选择"
+    - "♻️ 自动选择"
+    - "🎯 全球直连"
+    filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
+    use:
+      - provider1
+
+  - name: "🎶 TikTok"
+    type: select
+    proxies:
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇿🇦 南非节点"
+    - "🌐 其他地区"
+    - "🚨 失联节点"
+    - "🔯 故障转移"
+    - "🚀 手动选择"
+    - "♻️ 自动选择"
+    - "🎯 全球直连"
+    filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
+    use:
+      - provider1
+
+  - name: "📹 YouTube"
+    type: select
+    proxies:
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇿🇦 南非节点"
+    - "🌐 其他地区"
+    - "🚨 失联节点"
+    - "🔯 故障转移"
+    - "🚀 手动选择"
+    - "♻️ 自动选择"
+    - "🎯 全球直连"
+    filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
+    use:
+      - provider1
+
+  - name: "🎥 Netflix"
+    type: select
+    proxies:
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇿🇦 南非节点"
+    - "🌐 其他地区"
+    - "🚨 失联节点"
+    - "🔯 故障转移"
+    - "🚀 手动选择"
+    - "♻️ 自动选择"
+    - "🎯 全球直连"
+    filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
+    use:
+      - provider1
+
+  - name: "🎥 DisneyPlus"
+    type: select
+    proxies:
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇿🇦 南非节点"
+    - "🌐 其他地区"
+    - "🚨 失联节点"
+    - "🔯 故障转移"
+    - "🚀 手动选择"
+    - "♻️ 自动选择"
+    - "🎯 全球直连"
+    filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
+    use:
+      - provider1
+
+  - name: "🎥 HBO"
+    type: select
+    proxies:
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇿🇦 南非节点"
+    - "🌐 其他地区"
+    - "🚨 失联节点"
+    - "🔯 故障转移"
+    - "🚀 手动选择"
+    - "♻️ 自动选择"
+    - "🎯 全球直连"
+    filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
+    use:
+      - provider1
+
+  - name: "🎥 PrimeVideo"
+    type: select
+    proxies:
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇿🇦 南非节点"
+    - "🌐 其他地区"
+    - "🚨 失联节点"
+    - "🔯 故障转移"
+    - "🚀 手动选择"
+    - "♻️ 自动选择"
+    - "🎯 全球直连"
+    filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
+    use:
+      - provider1
+
+  - name: "🎥 AppleTV+"
+    type: select
+    proxies:
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇿🇦 南非节点"
+    - "🌐 其他地区"
+    - "🚨 失联节点"
+    - "🔯 故障转移"
+    - "🚀 手动选择"
+    - "♻️ 自动选择"
+    - "🎯 全球直连"
+    filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
+    use:
+      - provider1
+
+  - name: "🎥 Emby"
+    type: select
+    proxies:
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇿🇦 南非节点"
+    - "🌐 其他地区"
+    - "🚨 失联节点"
+    - "🔯 故障转移"
+    - "🚀 手动选择"
+    - "♻️ 自动选择"
+    - "🎯 全球直连"
+    filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
+    use:
+      - provider1
+
+  - name: "🎻 Spotify"
+    type: select
+    proxies:
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇿🇦 南非节点"
+    - "🌐 其他地区"
+    - "🚨 失联节点"
+    - "🔯 故障转移"
+    - "🚀 手动选择"
+    - "♻️ 自动选择"
+    - "🎯 全球直连"
+    filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
+    use:
+      - provider1
+
+  - name: "📺 Bahamut"
+    type: select
+    proxies:
+    - "🚀 手动选择"
+    - "♻️ 自动选择"
+    - "🎯 全球直连"
+
+  - name: "🌎 国外媒体"
+    type: select
+    proxies:
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇿🇦 南非节点"
+    - "🌐 其他地区"
+    - "🚨 失联节点"
+    - "🔯 故障转移"
+    - "🚀 手动选择"
+    - "♻️ 自动选择"
+    - "🎯 全球直连"
+    filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
+    use:
+      - provider1
+
+  - name: "🛒 国外电商"
+    type: select
+    proxies:
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇿🇦 南非节点"
+    - "🌐 其他地区"
+    - "🚨 失联节点"
+    - "🔯 故障转移"
+    - "🚀 手动选择"
+    - "♻️ 自动选择"
+    - "🎯 全球直连"
+    filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
+    use:
+      - provider1
+
+  - name: "📢 谷歌FCM"
+    type: select
+    proxies:
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇿🇦 南非节点"
+    - "🌐 其他地区"
+    - "🚨 失联节点"
+    - "🔯 故障转移"
+    - "🚀 手动选择"
+    - "♻️ 自动选择"
+    - "🎯 全球直连"
+
+  - name: "🇬 谷歌服务"
+    type: select
+    proxies:
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇿🇦 南非节点"
+    - "🌐 其他地区"
+    - "🚨 失联节点"
+    - "🔯 故障转移"
+    - "🚀 手动选择"
+    - "♻️ 自动选择"
+    - "🎯 全球直连"
+
+  - name: "🍎 苹果服务"
+    type: select
+    proxies:
+    - "🎯 全球直连"
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇿🇦 南非节点"
+    - "🌐 其他地区"
+    - "🚨 失联节点"
+    - "🔯 故障转移"
+    - "🚀 手动选择"
+    - "♻️ 自动选择"
+
+  - name: "Ⓜ️ 微软服务"
+    type: select
+    proxies:
+    - "🎯 全球直连"
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇿🇦 南非节点"
+    - "🌐 其他地区"
+    - "🚨 失联节点"
+    - "🔯 故障转移"
+    - "🚀 手动选择"
+    - "♻️ 自动选择"
+
+  - name: "🎮 游戏平台"
+    type: select
+    proxies:
+    - "🎯 全球直连"
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇿🇦 南非节点"
+    - "🌐 其他地区"
+    - "🚨 失联节点"
+    - "🔯 故障转移"
+    - "🚀 手动选择"
+    - "♻️ 自动选择"
+
+  - name: "🎮 Steam"
+    type: select
+    proxies:
+    - "🎯 全球直连"
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇿🇦 南非节点"
+    - "🌐 其他地区"
+    - "🚨 失联节点"
+    - "🔯 故障转移"
+    - "🚀 手动选择"
+    - "♻️ 自动选择"
+    filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
+    use:
+      - provider1
+
+  - name: "🚀 测速工具"
+    type: select
+    proxies:
+    - "🎯 全球直连"
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇿🇦 南非节点"
+    - "🌐 其他地区"
+    - "🚨 失联节点"
+    - "🔯 故障转移"
+    - "🚀 手动选择"
+    - "♻️ 自动选择"
+    filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
+    use:
+      - provider1
+
+  - name: "🐟 漏网之鱼"
+    type: select
+    proxies:
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇿🇦 南非节点"
+    - "🌐 其他地区"
+    - "🚨 失联节点"
+    - "🔯 故障转移"
+    - "🚀 手动选择"
+    - "♻️ 自动选择"
+    - "🎯 全球直连"
+    filter: "^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB|Expire)).*$"
+    use:
+      - provider1
+
+  - name: "🔀 非标端口"
+    type: select
+    proxies:
+    - "🐟 遵循规则"
+    - "🎯 全球直连"
+
+  - name: "🇺🇸 美国节点"
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    filter: "(?i)(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|UnitedStates|🇺🇸)"
+    use:
+      - provider1
+    interval: 300
+    tolerance: 50
+
+  - name: "🇯🇵 日本节点"
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    filter: "(?i)(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|(?<!尼|-)日|JP|Japan|🇯🇵)"
+    use:
+      - provider1
+    interval: 300
+    tolerance: 50
+
+  - name: "🇿🇦 南非节点" # 新增
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    filter: "(?i)(南非|开普敦|约翰内斯堡|ZA|South Africa|🇿🇦)"
+    use:
+      - provider1
+    interval: 300
+    tolerance: 50
+
+  - name: "🌐 其他地区"
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    # 更新后的 filter，排除了所有已删除地区，并加入了南非 (ZA)
+    filter: "^(?!.*(港|HK|hk|Hong Kong|HongKong|hongkong|深港|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|UnitedStates|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|(?<!尼|-)日|JP|Japan|🇯🇵|新加坡|坡|狮城|SG|Singapore|台|新北|彰化|TW|Taiwan|KR|Korea|KOR|首尔|韩|韓|加拿大|Canada|渥太华|温哥华|卡尔加里|英国|Britain|United Kingdom|England|伦敦|法国|France|巴黎|德国|Germany|柏林|法兰克福|荷兰|Netherlands|阿姆斯特丹|土耳其|Turkey|Türkiye|南非|ZA|South Africa|DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic|GB)).*$"
+    use:
+      - provider1
+    interval: 300
+    tolerance: 50
+
+  - name: "🚨 失联节点" # 新增
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    filter: "(?i)(claw|Claw|失联)"
+    use:
+      - provider1
+    interval: 300
+    tolerance: 50
+
+  - name: "🔯 故障转移" # 新增
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    proxies:
+      - "🇺🇸 美国节点"
+      - "🇯🇵 日本节点"
+      - "🌐 其他地区"
+      - "🚨 失联节点"
+      - "🎯 全球直连"
+    use:
+      - provider1
+    
+  - name: "🎯 全球直连"
+    type: select
+    url: https://www.gstatic.com/generate_204
+    proxies:
+      - DIRECT
+
+  - name: "🐟 遵循规则"
+    type: select
+    url: https://www.gstatic.com/generate_204
+    proxies:
+      - "🐟 漏网之鱼"
+
+rules:
+# --- 自定义规则 (新的规则放在前面以优先匹配) ---
+- "RULE-SET,Custom_Direct_NAS,🎯 全球直连" # 新增的 NAS 直连规则
+- "RULE-SET,Custom_Direct_ZDY,🎯 全球直连" # 新增的 自定直连规则
+- "RULE-SET,Custom_Media,🌎 国外媒体" # 新增的 自定流媒体规则, 导向 "🌎 国外媒体" 组
+- "RULE-SET,Custom_Proxy_ZDY,🚀 手动选择" # 新增的 自定代理规则
+
+# --- 原有自定义规则 ---
+- "GEOSITE,private,🎯 全球直连"
+- "GEOIP,private,🎯 全球直连,no-resolve"
+- "RULE-SET,Custom_Direct,🎯 全球直连"
+- "RULE-SET,Custom_Proxy,🚀 手动选择"
+- "GEOSITE,google-cn,🎯 全球直连"
+- "GEOSITE,category-games@cn,🎯 全球直连"
+- "RULE-SET,Steam_CDN,🎯 全球直连"
+- "GEOSITE,category-game-platforms-download,🎯 全球直连"
+- "GEOSITE,category-public-tracker,🎯 全球直连"
+- "GEOSITE,category-communication,💬 即时通讯"
+- "GEOSITE,category-social-media-!cn,🌐 社交媒体"
+- "GEOSITE,openai,🤖 ChatGPT"
+- "GEOSITE,bing,🤖 Copilot"
+- "GEOSITE,category-ai-!cn,🤖 AI服务"
+- "GEOSITE,github,🚀 GitHub"
+- "GEOSITE,category-speedtest,🚀 测速工具"
+- "GEOSITE,steam,🎮 Steam"
+- "GEOSITE,youtube,📹 YouTube"
+- "GEOSITE,apple-tvplus,🎥 AppleTV+"
+- "GEOSITE,apple,🍎 苹果服务"
+- "GEOSITE,microsoft,Ⓜ️ 微软服务"
+- "GEOSITE,googlefcm,📢 谷歌FCM"
+- "GEOSITE,google,🇬 谷歌服务"
+- "GEOSITE,tiktok,🎶 TikTok"
+- "GEOSITE,netflix,🎥 Netflix"
+- "GEOSITE,disney,🎥 DisneyPlus"
+- "GEOSITE,hbo,🎥 HBO"
+- "GEOSITE,primevideo,🎥 PrimeVideo"
+- "GEOSITE,apple-tvplus,🎥 AppleTV+"
+- "GEOSITE,category-emby,🎥 Emby"
+- "GEOSITE,spotify,🎻 Spotify"
+- "GEOSITE,bahamut,📺 Bahamut"
+- "GEOSITE,category-games,🎮 游戏平台"
+- "GEOSITE,category-entertainment,🌎 国外媒体"
+- "GEOSITE,category-ecommerce,🛒 国外电商"
+- "GEOSITE,gfw,🚀 手动选择"
+- "GEOIP,telegram,💬 即时通讯,no-resolve"
+- "GEOIP,twitter,🌐 社交媒体,no-resolve"
+- "GEOIP,facebook,🌐 社交媒体,no-resolve"
+- "GEOIP,google,🇬 谷歌服务,no-resolve"
+- "GEOIP,netflix,🎥 Netflix,no-resolve"
+- "GEOSITE,cn,🎯 全球直连"
+- "GEOIP,cn,🎯 全球直连,no-resolve"
+- "RULE-SET,Custom_Port_Direct,🔀 非标端口"
+- "RULE-SET,Custom_Final_Direct,🎯 全球直连" # 新增的最终直连规则
+- "MATCH,🐟 漏网之鱼"
+
+
+rule-providers:
+# --- 新增/修改的规则提供者 ---
+  Custom_Direct_NAS: # 新增 NAS 直连规则集
+    behavior: classical
+    interval: 28800
+    path: ./rule_provider/Custom_Direct_NAS.yaml
+    type: http
+    url: "https://raw.githubusercontent.com/ooojoker/Clash_rule/refs/heads/main/rules/nas_direct.list"
+    proxy: DIRECT
+
+  Custom_Direct_ZDY: # 新增 自定直连规则集
+    behavior: classical
+    interval: 28800
+    path: ./rule_provider/Custom_Direct_ZDY.yaml
+    type: http
+    url: "https://raw.githubusercontent.com/ooojoker/Clash_rule/refs/heads/main/rules/zdy_direct.list"
+    proxy: DIRECT
+
+  Custom_Proxy_ZDY: # 新增 自定代理规则集
+    behavior: classical
+    interval: 28800
+    path: ./rule_provider/Custom_Proxy_ZDY.yaml
+    type: http
+    url: "https://raw.githubusercontent.com/ooojoker/Clash_rule/refs/heads/main/rules/zdy_proxy.list"
+    proxy: DIRECT
+
+  Custom_Media: # 新增 自定流媒体规则集
+    behavior: classical
+    interval: 28800
+    path: ./rule_provider/Custom_Media.yaml
+    type: http
+    url: "https://raw.githubusercontent.com/ooojoker/Clash_rule/refs/heads/main/rules/zyd_media"
+    proxy: DIRECT # 保持不变
+
+  Custom_Final_Direct: # 新增 最终直连规则集 (用户要求在最后匹配)
+    behavior: classical
+    interval: 28800
+    path: ./rule_provider/Custom_Final_Direct.yaml
+    type: http
+    url: "https://raw.githubusercontent.com/ooojoker/Clash_rule/refs/heads/main/rules/zdy_finaldirect.list"
+    proxy: DIRECT
+
+# --- 原有的规则提供者 ---
+  Custom_Port_Direct:
+    behavior: classical
+    interval: 10800
+    path: ./rule_provider/Custom_Port_Direct.yaml
+    type: http
+    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml"
+    proxy: DIRECT
+
+  Custom_Direct:
+    behavior: classical
+    interval: 10800
+    path: ./rule_provider/Custom_Direct_Classical.yaml
+    type: http
+    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Classical.yaml"
+    proxy: DIRECT
+
+  Custom_Proxy:
+    behavior: classical
+    interval: 10800
+    path: ./rule_provider/Custom_Proxy_Classical.yaml
+    type: http
+    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Classical.yaml"
+    proxy: DIRECT
+
+  Steam_CDN:
+    behavior: classical
+    interval: 10800
+    path: ./rule_provider/Steam_CDN_Classical.yaml
+    type: http
+    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_Classical.yaml"
+    proxy: DIRECT
