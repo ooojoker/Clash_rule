@@ -30,11 +30,11 @@ proxy-groups:
       - 🇯🇵 日本 01
       - 🇯🇵 日本 02
       - 🇯🇵 日本 03
-      - 🇿🇦 南非01
-      - 🇿🇦 南非02
-      - 🇿🇦 南非03
-      - ‍☠️ Claw失联 01
-      - ‍☠️ Claw失联 02
+      - 🇿🇦 南非 01
+      - 🇿🇦 南非 02
+      - 🇿🇦 南非 03
+      - ‍☠️ Claw 01
+      - ‍☠️ Claw 02
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
   - name: 🏚️ VPN回家
     type: select
@@ -283,11 +283,11 @@ proxy-groups:
       - 🇯🇵 日本 01
       - 🇯🇵 日本 02
       - 🇯🇵 日本 03
-      - 🇿🇦 南非01
-      - 🇿🇦 南非02
-      - 🇿🇦 南非03
-      - ‍☠️ Claw失联 01
-      - ‍☠️ Claw失联 02
+      - 🇿🇦 南非 01
+      - 🇿🇦 南非 02
+      - 🇿🇦 南非 03
+      - ‍☠️ Claw 01
+      - ‍☠️ Claw 02
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
   - name: 🈶 日本优先场景
     type: select
@@ -331,11 +331,11 @@ proxy-groups:
       - 🇺🇸 美国 04
       - 🇺🇸 美国 05
       - 🇺🇸 美国 06
-      - 🇿🇦 南非01
-      - 🇿🇦 南非02
-      - 🇿🇦 南非03
-      - ‍☠️ Claw失联 01
-      - ‍☠️ Claw失联 02
+      - 🇿🇦 南非 01
+      - 🇿🇦 南非 02
+      - 🇿🇦 南非 03
+      - ‍☠️ Claw 01
+      - ‍☠️ Claw 02
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
   - name: 🆒 南非优先场景
     type: select
@@ -360,9 +360,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 🇿🇦 南非01
-      - 🇿🇦 南非02
-      - 🇿🇦 南非03
+      - 🇿🇦 南非 01
+      - 🇿🇦 南非 02
+      - 🇿🇦 南非 03
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/DomesticMedia.png
   - name: 🎦 故障转移南非优先
     type: fallback
@@ -370,9 +370,9 @@ proxy-groups:
     interval: 180
     max-timeout: 2000
     proxies:
-      - 🇿🇦 南非01
-      - 🇿🇦 南非02
-      - 🇿🇦 南非03
+      - 🇿🇦 南非 01
+      - 🇿🇦 南非 02
+      - 🇿🇦 南非 03
       - 🇯🇵 日本 01
       - 🇯🇵 日本 02
       - 🇯🇵 日本 03
@@ -382,8 +382,8 @@ proxy-groups:
       - 🇺🇸 美国 04
       - 🇺🇸 美国 05
       - 🇺🇸 美国 06
-      - ‍☠️ Claw失联 01
-      - ‍☠️ Claw失联 02
+      - ‍☠️ Claw 01
+      - ‍☠️ Claw 02
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/DomesticMedia.png
   - name: 🈴 失联场景
     type: select
@@ -408,8 +408,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - ‍☠️ Claw失联 01
-      - ‍☠️ Claw失联 02
+      - ‍☠️ Claw 01
+      - ‍☠️ Claw 02
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/WiFi.png
   - name: 🈵 故障转移失联
     type: fallback
@@ -417,8 +417,8 @@ proxy-groups:
     interval: 180
     max-timeout: 2000
     proxies:
-      - ‍☠️ Claw失联 01
-      - ‍☠️ Claw失联 02
+      - ‍☠️ Claw 01
+      - ‍☠️ Claw 02
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/WiFi.png
   - name: 💲 VPN优先场景
     type: select
@@ -446,9 +446,9 @@ proxy-groups:
       - 🇺🇸 美国 04
       - 🇺🇸 美国 05
       - 🇺🇸 美国 06
-      - 🇿🇦 南非01
-      - 🇿🇦 南非02
-      - 🇿🇦 南非03
+      - 🇿🇦 南非 01
+      - 🇿🇦 南非 02
+      - 🇿🇦 南非 03
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png
   - name: 🈯 故障转移VPN优先
     type: fallback
@@ -462,9 +462,9 @@ proxy-groups:
       - 🇺🇸 美国 01
       - 🇺🇸 美国 02
       - 🇺🇸 美国 03
-      - 🇿🇦 南非01
-      - 🇿🇦 南非02
-      - 🇿🇦 南非03
+      - 🇿🇦 南非 01
+      - 🇿🇦 南非 02
+      - 🇿🇦 南非 03
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png
   - name: ㊗️ 流量优先场景
     type: select
@@ -492,9 +492,9 @@ proxy-groups:
       - 🇺🇸 美国 04
       - 🇺🇸 美国 05
       - 🇺🇸 美国 06
-      - 🇿🇦 南非01
-      - 🇿🇦 南非02
-      - 🇿🇦 南非03
+      - 🇿🇦 南非 01
+      - 🇿🇦 南非 02
+      - 🇿🇦 南非 03
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
   - name: ㊗️ 故障转移流量优先
     type: fallback
@@ -508,9 +508,9 @@ proxy-groups:
       - 🇺🇸 美国 01
       - 🇺🇸 美国 02
       - 🇺🇸 美国 03
-      - 🇿🇦 南非01
-      - 🇿🇦 南非02
-      - 🇿🇦 南非03
+      - 🇿🇦 南非 01
+      - 🇿🇦 南非 02
+      - 🇿🇦 南非 03
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
   - name: ♻️ 自动选择
     type: url-test
@@ -527,11 +527,11 @@ proxy-groups:
       - 🇯🇵 日本 01
       - 🇯🇵 日本 02
       - 🇯🇵 日本 03
-      - 🇿🇦 南非01
-      - 🇿🇦 南非02
-      - 🇿🇦 南非03
-      - ‍☠️ Claw失联 01
-      - ‍☠️ Claw失联 02
+      - 🇿🇦 南非 01
+      - 🇿🇦 南非 02
+      - 🇿🇦 南非 03
+      - ‍☠️ Claw 01
+      - ‍☠️ Claw 02
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Round_Robin.png
   - name: 🎯 全球直连
     type: select
