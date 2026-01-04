@@ -327,11 +327,16 @@ DOMAIN-SUFFIX,ilovepdf.com
 # AI
 DOMAIN-SUFFIX,new.clivia.fun
 DOMAIN-SUFFIX,free.yubbchat
+
 # nbtab
 DOMAIN-SUFFIX,naivetab.com
 DOMAIN-SUFFIX,nb.tab.com
 DOMAIN-SUFFIX,tab.nbtab.cc
 DOMAIN-SUFFIX,rbtab.com
+
+# VPN回家
+DOMAIN-SUFFIX,fakenas.eu.org
+DOMAIN-SUFFIX,awesome91.eu.org
 
 # 国内测速
 DOMAIN-SUFFIX,wangsuceshi.bmcx.com
