@@ -284,6 +284,7 @@ payload:
 
   # VPN回家
   - '+.fakenas.eu.org'
+  - '+.awesome91.eu.org'
 
   # 国内测速
   - '+.wangsuceshi.bmcx.com'
