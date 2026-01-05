@@ -339,6 +339,9 @@ DOMAIN-SUFFIX,rbtab.com
 DOMAIN-SUFFIX,fakenas.eu.org
 DOMAIN-SUFFIX,awesome91.eu.org
 
+# IPV6 VPN
+DOMAIN-SUFFIX,fakenas.tk
+
 # 国内测速
 DOMAIN-SUFFIX,wangsuceshi.bmcx.com
 
