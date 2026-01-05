@@ -1,3 +1,4 @@
-payload:
-  - '+.link00.okemby.org'
-  - '+.link01.okemby.org'
+## ZYD_MEDIA
+# Emby服
+DOMAIN-SUFFIX,link00.okemby.org
+DOMAIN-SUFFIX,link01.okemby.org
