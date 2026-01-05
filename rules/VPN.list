@@ -1,2 +1,3 @@
-#NAS
-DOMAIN-SUFFIX,fakenas.tk
+payload:
+  # NAS
+  - '+.fakenas.tk'
