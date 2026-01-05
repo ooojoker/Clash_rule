@@ -1,4 +1,3 @@
 # Emby服
-payload:
-  - '+.link00.okemby.org'
-  - '+.link01.okemby.org'
+DOMAIN-SUFFIX,link00.okemby.org
+DOMAIN-SUFFIX,link01.okemby.org
