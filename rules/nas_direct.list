@@ -1,5 +1,6 @@
-#NAS内网PT下载地址
-SRC-IP-CIDR,192.168.1.35/32,no-resolve
-SRC-IP-CIDR,192.168.1.30/32,no-resolve
-SRC-IP-CIDR,192.168.1.39/32,no-resolve
-SRC-IP-CIDR,192.168.1.99/32,no-resolve
+payload:
+  # NAS内网PT下载地址
+  - '192.168.1.35/32'
+  - '192.168.1.30/32'
+  - '192.168.1.39/32'
+  - '192.168.1.99/32'
