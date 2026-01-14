@@ -335,9 +335,11 @@ DOMAIN-SUFFIX,nb.tab.com
 DOMAIN-SUFFIX,tab.nbtab.cc
 DOMAIN-SUFFIX,rbtab.com
 
-# VPN回家
+# FRP内网穿透
 DOMAIN-SUFFIX,fakenas.eu.org
 DOMAIN-SUFFIX,awesome91.eu.org
+DOMAIN-SUFFIX,realnas.tk
+
 # IPV6 VPN
 DOMAIN-SUFFIX,fakenas.tk
 
