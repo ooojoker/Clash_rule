@@ -5,5 +5,3 @@ SRC-IP-CIDR,192.168.1.30/32,no-resolve
 SRC-IP-CIDR,192.168.1.39/32,no-resolve
 SRC-IP-CIDR,192.168.1.99/32,no-resolve
 
-DOMAIN-SUFFIX,tri.ccwu.cc
-DOMAIN-SUFFIX,x.tri.ccwu.cc
