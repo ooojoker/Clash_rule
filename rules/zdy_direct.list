@@ -1,4 +1,3 @@
-## ZDY_DIRECT
 # PT站
 # NAME: PrivateTracker
 # AUTHOR: blackmatrix7
@@ -284,6 +283,7 @@ IP-CIDR,89.110.76.229/32,no-resolve
 # DOMAIN-KEYWORD: 5
 # DOMAIN-SUFFIX: 1
 # PROCESS-NAME: 28
+
 # TOTAL: 34
 DOMAIN-SUFFIX,qbittorrent.org
 DOMAIN-KEYWORD,aria2
