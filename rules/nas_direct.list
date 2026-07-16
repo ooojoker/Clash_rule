@@ -5,7 +5,13 @@ SRC-IP-CIDR,192.168.1.30/32,no-resolve
 SRC-IP-CIDR,192.168.1.39/32,no-resolve
 SRC-IP-CIDR,192.168.1.99/32,no-resolve
 # 更换网段
-SRC-IP-CIDR,192.168.10.35/32,no-resolve
 SRC-IP-CIDR,192.168.10.30/32,no-resolve
+SRC-IP-CIDR,192.168.10.31/32,no-resolve
+SRC-IP-CIDR,192.168.10.32/32,no-resolve
+SRC-IP-CIDR,192.168.10.33/32,no-resolve
+SRC-IP-CIDR,192.168.10.34/32,no-resolve
+SRC-IP-CIDR,192.168.10.35/32,no-resolve
+SRC-IP-CIDR,192.168.10.36/32,no-resolve
+SRC-IP-CIDR,192.168.10.37/32,no-resolve
+SRC-IP-CIDR,192.168.10.38/32,no-resolve
 SRC-IP-CIDR,192.168.10.39/32,no-resolve
-SRC-IP-CIDR,192.168.10.99/32,no-resolve
