@@ -26,3 +26,15 @@ SRC-IP-CIDR,10.0.0.36/32,no-resolve
 SRC-IP-CIDR,10.0.0.37/32,no-resolve
 SRC-IP-CIDR,10.0.0.38/32,no-resolve
 SRC-IP-CIDR,10.0.0.39/32,no-resolve
+
+# 10网段
+SRC-IP-CIDR,10.10.10.30/32,no-resolve
+SRC-IP-CIDR,10.10.10.31/32,no-resolve
+SRC-IP-CIDR,10.10.10.32/32,no-resolve
+SRC-IP-CIDR,10.10.10.33/32,no-resolve
+SRC-IP-CIDR,10.10.10.34/32,no-resolve
+SRC-IP-CIDR,10.10.10.35/32,no-resolve
+SRC-IP-CIDR,10.10.10.36/32,no-resolve
+SRC-IP-CIDR,10.10.10.37/32,no-resolve
+SRC-IP-CIDR,10.10.10.38/32,no-resolve
+SRC-IP-CIDR,10.10.10.39/32,no-resolve
