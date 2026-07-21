@@ -16,5 +16,7 @@ DOMAIN-SUFFIX,url.v1.mk
 #网站
 DOMAIN-SUFFIX,qichiyu.com
 DOMAIN-SUFFIX,linux.do
+#谷歌商店
 
+DOMAIN-SUFFIX,googleapis.cn
 
