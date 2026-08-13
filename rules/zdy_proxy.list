@@ -19,6 +19,11 @@ DOMAIN-SUFFIX,url.v1.mk
 DOMAIN-SUFFIX,qichiyu.com
 DOMAIN-SUFFIX,linux.do
 #谷歌商店
-
 DOMAIN-SUFFIX,googleapis.cn
+DOMAIN-SUFFIX,services.googleapis.cn
+DOMAIN-SUFFIX,clientservices.googleapis.com
+DOMAIN-SUFFIX,gvt1.com
+DOMAIN-SUFFIX,gvt2.com
+DOMAIN-SUFFIX,googlelevante.com
+
 
