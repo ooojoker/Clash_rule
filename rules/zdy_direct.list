@@ -24,6 +24,9 @@ DOMAIN-SUFFIX,linzixuan.top
 # 国内测速
 DOMAIN-SUFFIX,wangsuceshi.bmcx.com
 
+# IPV6
+DOMAIN-SUFFIX,test-ipv6.com
+
 # 小肥羊ALL IN ONE
 # DOMAIN-SUFFIX,r.inews.qq.com 
 
