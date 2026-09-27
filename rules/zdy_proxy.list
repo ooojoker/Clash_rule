@@ -1,6 +1,10 @@
 # IPV6
 DOMAIN-SUFFIX,test-ipv6.com
 DOMAIN-SUFFIX,music.gdstudio.xyz
+# Moviepolit
+DOMAIN-SUFFIX,graphql.anilist.co
+DOMAIN-SUFFIX,theaudiodb.com
+
 
 ## ZDY_PROXY
 # PT站
