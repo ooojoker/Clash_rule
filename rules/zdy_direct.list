@@ -1,6 +1,9 @@
 # PT
 # DOMAIN-SUFFIX,hdwing.org
 
+# cf tunnel
+DOMAIN-SUFFIX,lmb.ccwu.cc
+
 # 网站
 DOMAIN-KEYWORD,purefishing
 DOMAIN-SUFFIX,ilovepdf.com
