@@ -1,6 +1,10 @@
 # IPV6
 DOMAIN-SUFFIX,test-ipv6.com
 DOMAIN-SUFFIX,music.gdstudio.xyz
+
+# cf tunnel
+DOMAIN-SUFFIX,lmb.ccwu.cc
+
 # IP
 SRC-IP-CIDR,192.129.247.29/32,no-resolve
 SRC-IP-CIDR,92.4.141.78/32,no-resolve
