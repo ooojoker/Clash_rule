@@ -4,6 +4,8 @@ DOMAIN-SUFFIX,music.gdstudio.xyz
 
 # cf tunnel
 DOMAIN-SUFFIX,lmb.ccwu.cc
+# 南非
+DOMAIN-SUFFIX,fakenas.eu.org
 
 # IP
 SRC-IP-CIDR,192.129.247.29/32,no-resolve
